@@ -29,10 +29,10 @@ $ source myproject/venv/bin/activate
 $ pip3 install -r requirements.txt
 ```
 
-## How to use 
+## How to use LARD tool
 You can use the LARD tool to auto-generate disfluencies such as repetitions, restarts, and replacements.
 
-### Initialize tool
+### Initialize LARD tool
 ```python
 >>> from disfluency_generation import LARD
 >>> lard = LARD
