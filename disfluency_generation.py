@@ -241,11 +241,6 @@ class LARD:
             # Find pos tag for each token
             pos_tags = nltk.pos_tag(fluent_tokens)
 
-        if with_cue:
-            disfl_type = candidate_pos.lower() + "_with_cue"
-        else:
-            disfl_type = candidate_pos.lower() + "_without_cue"
-
         # Create list for all possible replacement candidates
         candidates = []
 
@@ -267,6 +262,11 @@ class LARD:
         non_formatted_pos = candidates[random_candidate_idx][2]
         # Revert pos to the right form for NLTK library
         formatted_pos = utils.revert_pos_format(non_formatted_pos)
+
+        if with_cue:
+            disfl_type = formatted_pos.lower() + "_with_cue"
+        else:
+            disfl_type = formatted_pos.lower() + "_without_cue"
 
         # Find synonyms and antonyms
         synonyms, antonyms = utils.extract_syns_ants(candidates[random_candidate_idx][0], formatted_pos)
