@@ -1,6 +1,5 @@
-from nltk.corpus import wordnet
 import nltk
-import pandas as pd
+from nltk.corpus import wordnet
 
 nltk.download('punkt')
 nltk.download('averaged_perceptron_tagger')
@@ -12,7 +11,6 @@ REPAIR_CUES = [("no", 1), ("no wait", 2), ("no sorry", 2), ("I meant", 2), ("I m
                ("wait a minute", 3),
                ("no wait a minute", 4)]
 
-from nltk.corpus import wordnet
 
 none_tuple = (None, None, None, None, None)
 
