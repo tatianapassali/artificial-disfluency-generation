@@ -14,18 +14,19 @@ This repository contains the code for paper: LARD: Large-scale Artificial Disflu
 To use the LARD tool, you need to clone the repository locally and 
 install the necessary library dependencies from requirements.txt
 ```
-git clone https://github.com/tatianapassali/topic-controllable-summarization.git
-cd artificial-disfluency-generation
-pip3 install -r requirements.txt
+$ git clone https://github.com/tatianapassali/topic-controllable-summarization.git
+$ cd artificial-disfluency-generation
+$ pip3 install -r requirements.txt
 ```
 
 Alternatively, you can create a python virtual environment (venv) using the virtualenv tool.
 Just make sure that you run Python 3.8 or more. After cloning the repository, as shown above,
 you have to initialize and activate the virtual enviroment.
 ```
-virtualenv artificial-disfluency-generation
-source myproject/venv/bin/activate
-pip3 install -r requirements.txt
+$ cd artificial-disfluency-generation
+$ virtualenv artificial-disfluency-generation
+$ source myproject/venv/bin/activate
+$ pip3 install -r requirements.txt
 ```
 
 ## How to use 
