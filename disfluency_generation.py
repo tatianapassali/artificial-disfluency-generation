@@ -7,6 +7,7 @@ from random import randrange
 import utils
 from utils import none_tuple
 from colorama import init
+
 init(autoreset=True)
 
 
@@ -32,6 +33,8 @@ class LARD:
 
             annotations (List[`str`]): List of token-level annotations for the disfluent tokens
             (F: Fluent, D: Disfluent)
+
+            disfl_type (`str): Type of disfluency
         """
         annotations = []
         disfluent_tokens = []
@@ -44,7 +47,8 @@ class LARD:
 
         if len(fluent_tokens) == 1:
             if degree > 1:
-                print("Warning! Only a first degree repetition can be created, because input sequence contains only one token.")
+                print(
+                    "Warning! Only a first degree repetition can be created, because input sequence contains only one token.")
                 print("Reseting ngram to 1...\n")
 
             # The only possible disfluency that we can create is first degree repetition
@@ -155,6 +159,9 @@ class LARD:
 
                     annotations (List[`str`]): List of token-level annotations for the disfluent tokens
                     (F: Fluent, D: Disfluent)
+
+                    disfl_type (`str): Type of disfluency
+
                 """
         if not fluent_sentence_1 or not fluent_sentence_2:
             raise TypeError('''A 'NoneType' object received while a 'str' object is required.''')
@@ -182,13 +189,15 @@ class LARD:
 
         if discarded_tokens[0].lower() == fluent_tokens[0].lower():
             print(
-                "Warning! First token of correction is the same with the first token of the disfluency, aborted to avoid "
+                "Warning! First token of correction is the same with the first token of the disfluency, aborted to "
+                "avoid "
                 "creating "
                 "a replacement instead of restart...")
             return none_tuple
 
         elif discarded_tokens[-1].lower() == fluent_tokens[0].lower():
-            print("Warning! Consecutive tokens are detected, aborted to avoid creating a repetition instead of restart...")
+            print("Warning! Consecutive tokens are detected, aborted to avoid creating a repetition instead of "
+                  "restart...")
             return none_tuple
 
         disfluent_tokens = fluent_for_disfluent_tokens[:random_location_idx] + fluent_tokens
@@ -228,6 +237,9 @@ class LARD:
 
                      annotations (List[`str`]): List of token-level annotations for the disfluent tokens
                      (F: Fluent, D: Disfluent)
+
+                    disfl_type (`str): Type of disfluency
+
                  """
 
         if not fluent_sentence:
@@ -249,7 +261,6 @@ class LARD:
             for t in utils.extract_pos_format(candidate_pos):
                 if pos_tags[i][1] == t:
                     candidates.append((pos_tags[i][0], i, t))
-
 
         # If there is no possible candidate for replacement in the input sentence
         if len(candidates) == 0:
