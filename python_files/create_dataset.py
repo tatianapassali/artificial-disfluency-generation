@@ -17,8 +17,8 @@ lard = LARD()
 
 
 def create_dataset(input_file_path,
-                   output_dir,
-                   column_text=None,
+                   column_text,
+                   output_dir=None,
                    keep_fluent=False,
                    percentages=None,
                    percentages_with_fluent=None,
@@ -26,6 +26,65 @@ def create_dataset(input_file_path,
                    replacement_types_percentage=None,
                    create_all_files=True,
                    concat_files=True):
+    """
+    This function is used to create multiple disfluencies (repetition, restarts and replacements) from fluent text
+    from a .csv file.
+
+    Args:
+            input_file_path (`str`): The path of the input file. The input file must be formatted as
+            a .csv file with one or more column and a least one text column that you want to generate
+            the disfluencies. To see a sample data file, please refer to the data/sample_data directory.
+
+            output_dir (`int`, *optional*, defaults to 'None'): The directory to store the created files.
+            If it is not specified, the data are stored by default to ./data/output_data directory.
+
+            column_text (`str`): The column that contains the fluent text.
+
+            keep_fluent (`bool`, *optional*, defaults to False): Whether or not to keep some fluencies along
+            with the disfluencies. If it is not specified, the default value is set to False.
+
+            percentages (List[`int`], *optional*, defaults to 'None'): A list with the percentages of different types
+            of disfluencies. The first value refers to the percentage of repetitions, the second value refers to the
+            percentage of restarts and the third value refers to the percentage of replacements. All the values must
+            sum to 100. If it is not specified, the default value is set to  [50, 25, 25], where 50% of the input
+            text will be repetitions, 25% restarts and 25% replacements.
+
+            percentages_with_fluent(List[`int`], *optional*, defaults to 'None'): A list with the percentages of
+            different types of disfluencies, when keep_fluent = True. The first value refers to the percentage of
+            fluencies, the second value refers to the percentage of repetitions, the third value refers to the
+            percentage of restarts and the fourth value refers to the percentage of replacements. All the values
+            must sum to 100.If it is not specified, the default value is set to [50, 30, 10, 10], where 50% of
+            the input text will be fluencies, 30% will be repetitions, 10% restarts and 10% replacements.
+
+            repetition_degrees_percentage (List[`int`], *optional*, defaults to 'None'): A list with the percentages
+            of different types of repetitions. The first value refers to the percentage of first-degree repetitions,
+            the second value refers to the percentage of second-degree repetitions and the third value refers to the
+            percentage of  third-degree repetitions. All the values must sum to 100. If it is not specified, the default
+            value is set to [40, 30, 30] where 450% of the repetition set will be first-degree repetitions, 30%  will be
+            second-degree repetitions and 30% will be third-degree repetitions.
+
+            replacement_types_percentage (List[`int`], *optional*, defaults to 'None'): A list with the percentages
+            of different types of repetitions. The first value refers to the percentage of noun replacements with repair
+            cue, the second value refers to the percentage of noun replacements without repair cue, the third value
+            refers to the percentage of verb replacement with repair cue, the fourth value refers to the percentage
+            of verb replacement without repair cue, the fifth value refers to the percentage of adjective replacement
+            with repair cue and the sixth value refers to the percentage of adjective replacement without repair cue.
+            All the values must sum to 100. If it is not specified, the default value is set to [20, 15, 20, 15, 20, 10],
+            where 20% of replacement set are noun replacements with cue,
+                  15% noun replacements without cue,
+                  20% verb replacement with cue,
+                  15% verb replacement without cue,
+                  20% adjective replacement with cue,
+                  10% adjective replacement without cue.
+
+            create_all_files (`bool`, *optional*, defaults to True): Whether or not to save all different types of
+            disfluencies. If not specified, the default value is set to True.
+
+            concat_files (`bool`, *optional*, defaults to True): Whether or not to concat into a final file all
+            the different types of disfluencies. If not specified, the default value is set to True.
+
+    """
+
     final_df = pd.DataFrame()
 
     if input_file_path.lower().endswith(".csv"):
