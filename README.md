@@ -1,5 +1,5 @@
 # artificial-disfluency-generation
-LARD: A tool to generate easily and promptly artificial disfluencies from fluent text
+LARD: A tool to generate artificial disfluencies from fluent text easily and promptly
 
 This repository contains the code for paper: LARD: Large-scale Artificial Disfluency Generation
 
@@ -104,14 +104,13 @@ create_dataset(INPUT_FILE_PATH,
                    concat_files=True)
 ```
 
-You can also specify the fractions of fluencies, repetitions, replacements and restarts. Please read the 
-whole documentation of create_dataset.py for more information about the parameters of this function.
+You can also specify the fraction of fluencies, repetitions, replacements and restarts. Please refer the documentation of create_dataset.py for more information about the parameters of this function.
 
 **NOTE**: The input file must be formatted as a.csv file with one or more columns. You also need to specify the text column for the generation of the
 disfluencies. A sample .csv file can be found at sample_data directory. 
 
 ## LARD Dataset
-We create our own disfluent dataset bulding upon [Schema-Guided Dialogue (SGD)](https://arxiv.org/pdf/1801.04871.pdf). 
+We created our own disfluent dataset bulding upon [Schema-Guided Dialogue (SGD)](https://arxiv.org/pdf/1801.04871.pdf). 
 
 **Dataset Summary**
 
