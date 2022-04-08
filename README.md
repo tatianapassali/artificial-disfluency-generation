@@ -150,9 +150,9 @@ The dataset consists of three Comma-Separated Values (CSV) files (train.csv, val
 
 You can download the dataset from [here.](https://bit.ly/LARDdataset)
 
-## Citation 
+## Citation
 
-You can find more details about this work in our [paper]((https://arxiv.org/pdf/2201.05041.pdf)). If you use our code in your research, please consider citing our paper.
+You can find more details about this work in our [paper](https://arxiv.org/pdf/2201.05041.pdf). If you use our code in your research, please consider citing our paper.
 
 Bibtex entry:
 
