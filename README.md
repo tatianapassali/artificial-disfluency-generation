@@ -1,7 +1,7 @@
 # artificial-disfluency-generation
 LARD: A tool to generate artificial disfluencies from fluent text easily and promptly
 
-This repository contains the code for paper: LARD: Large-scale Artificial Disfluency Generation
+This repository contains the code for paper: [LARD: Large-scale Artificial Disfluency Generation.](https://arxiv.org/pdf/2201.05041.pdf)
 
 ## Requirements
 `Python>=3.8`  
@@ -106,7 +106,7 @@ create_dataset(INPUT_FILE_PATH,
                    concat_files=True)
 ```
 
-You can also specify the fraction of fluencies, repetitions, replacements and restarts. Please refer the documentation of create_dataset.py for more information about the parameters of this function.
+You can also specify the fraction of fluencies, repetitions, replacements and restarts. Please refer to the documentation of create_dataset.py for more information about the parameters of this function.
 
 **NOTE**: The input file must be formatted as a.csv file with one or more columns. You also need to specify the text column for the generation of the
 disfluencies. A sample .csv file can be found at sample_data directory. 
@@ -150,8 +150,26 @@ The dataset consists of three Comma-Separated Values (CSV) files (train.csv, val
 
 You can download the dataset from [here.](https://bit.ly/LARDdataset)
 
-## Licence
-tbd
+## Citation 
+
+You can find more details about this work in our [paper]((https://arxiv.org/pdf/2201.05041.pdf)). If you use our code in your research, please consider citing our paper:
+
+> T. Passali, T. Mavropoulos, G. Tsoumakas, G. Meditskos and S. Vrochidis. LARD: Large-scale Artificial Disfluency Generation. In Proceedings of the Thirteenth International Conference on Language Resources and Evaluation (LREC 2022) (to appear). 2022.
+
+Bibtex entry:
+
+```
+@inproceedings{lard2022,
+  title={LARD: Large-scale Artificial Disfluency Generation},
+  author={Passali, Tatiana and Mavropoulos, Thanassis and Tsoumakas, Grigorios and Meditskos, Georgios and Vrochidis, Stefanos},
+  booktitle={Proceedings of the Thirteenth International Conference on Language Resources and Evaluation (LREC 2022)},
+  pages={N/A},
+  year={2022}
+}
+```
 
 ## Contributors
+tbd
+
+## Licence
 tbd
