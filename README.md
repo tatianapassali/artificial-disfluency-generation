@@ -91,7 +91,6 @@ sequences to generate a restart like this:
 'I prefer to drink chocolate well I actually meant drink coffee without sugar .'
 ```
 
-
 ## Generate multiple disfluencies from text file
 You can also use the LARD tool to generate multiple types of disfluencies from a text file using the create_dataset
 function.
