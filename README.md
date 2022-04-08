@@ -152,9 +152,7 @@ You can download the dataset from [here.](https://bit.ly/LARDdataset)
 
 ## Citation 
 
-You can find more details about this work in our [paper]((https://arxiv.org/pdf/2201.05041.pdf)). If you use our code in your research, please consider citing our paper:
-
-> T. Passali, T. Mavropoulos, G. Tsoumakas, G. Meditskos and S. Vrochidis. LARD: Large-scale Artificial Disfluency Generation. In Proceedings of the Thirteenth International Conference on Language Resources and Evaluation (LREC 2022) (to appear). 2022.
+You can find more details about this work in our [paper]((https://arxiv.org/pdf/2201.05041.pdf)). If you use our code in your research, please consider citing our paper.
 
 Bibtex entry:
 
