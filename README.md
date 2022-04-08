@@ -148,4 +148,10 @@ The dataset consists of three Comma-Separated Values (CSV) files (train.csv, val
 
 **License:** The dataset is released under [![License: CC BY-SA 4.0](https://licensebuttons.net/l/by-sa/4.0/80x15.png)](https://creativecommons.org/licenses/by-sa/4.0/).
 
-You can download the dataset from [here.](https://bit.ly/LARDdataset) 
+You can download the dataset from [here.](https://bit.ly/LARDdataset)
+
+## Licence
+tbd
+
+## Contributors
+tbd
