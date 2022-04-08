@@ -160,7 +160,7 @@ Bibtex entry:
 @inproceedings{lard2022,
   title={LARD: Large-scale Artificial Disfluency Generation},
   author={Passali, Tatiana and Mavropoulos, Thanassis and Tsoumakas, Grigorios and Meditskos, Georgios and Vrochidis, Stefanos},
-  booktitle={Proceedings of the Thirteenth International Conference on Language Resources and Evaluation (LREC 2022)},
+  booktitle={Proceedings of the Thirteenth International Conference on Language Resources and Evaluation (LREC 2022), to appear},
   pages={N/A},
   year={2022}
 }
