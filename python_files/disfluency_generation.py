@@ -1,15 +1,12 @@
-import string
+import string, random, math
 import nltk
-import random
-import math
-from colorama import Fore
+from colorama import Fore, init
 from random import randrange
-import utils
-from utils import none_tuple
-from colorama import init
+from python_files.utils import extract_pos_format, \
+    none_tuple, revert_pos_format, extract_syns_ants, \
+    REPAIR_CUES
 
 init(autoreset=True)
-
 
 class LARD:
 
@@ -258,7 +255,7 @@ class LARD:
 
         # If pos is in the tag list keep the corresponding token as a candidate
         for i in range(len(pos_tags)):
-            for t in utils.extract_pos_format(candidate_pos):
+            for t in extract_pos_format(candidate_pos):
                 if pos_tags[i][1] == t:
                     candidates.append((pos_tags[i][0], i, t))
 
@@ -272,7 +269,7 @@ class LARD:
         # Extract pos
         non_formatted_pos = candidates[random_candidate_idx][2]
         # Revert pos to the right form for NLTK library
-        formatted_pos = utils.revert_pos_format(non_formatted_pos)
+        formatted_pos = revert_pos_format(non_formatted_pos)
 
         if with_cue:
             disfl_type = formatted_pos.lower() + "_with_cue"
@@ -280,7 +277,7 @@ class LARD:
             disfl_type = formatted_pos.lower() + "_without_cue"
 
         # Find synonyms and antonyms
-        synonyms, antonyms = utils.extract_syns_ants(candidates[random_candidate_idx][0], formatted_pos)
+        synonyms, antonyms = extract_syns_ants(candidates[random_candidate_idx][0], formatted_pos)
 
         possible_replacements = synonyms + antonyms
 
@@ -345,11 +342,11 @@ class LARD:
 
             # If we want to add repair cues between RM and RP
             if with_cue:
-                random_repair_cue_idx = randrange(len(utils.REPAIR_CUES))
+                random_repair_cue_idx = randrange(len(REPAIR_CUES))
 
-                disfluent_tokens.append(utils.REPAIR_CUES[random_repair_cue_idx][0])
+                disfluent_tokens.append(REPAIR_CUES[random_repair_cue_idx][0])
 
-                for i in range(utils.REPAIR_CUES[random_repair_cue_idx][1]):
+                for i in range(REPAIR_CUES[random_repair_cue_idx][1]):
                     annotations.append("D")
 
             annotations.extend(["F"] * (random_degree + 1))

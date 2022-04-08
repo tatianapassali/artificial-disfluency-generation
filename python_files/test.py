@@ -1,4 +1,4 @@
-from disfluency_generation import LARD
+from python_files.disfluency_generation import LARD
 
 
 if __name__ == "__main__":

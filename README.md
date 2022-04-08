@@ -25,16 +25,18 @@ you have to initialize and activate the virtual enviroment.
 ```
 $ cd artificial-disfluency-generation
 $ virtualenv artificial-disfluency-generation
-$ source myproject/venv/bin/activate
+$ source artificial-disfluency-generation/bin/activate
 $ pip3 install -r requirements.txt
 ```
 
+Once you're done with the installations, you can either invoke Python from the command line 
+or create a new python file to run the code below.
 ## How to use 
 You can use the LARD tool to auto-generate disfluencies such as repetitions, restarts, and replacements.
 
 ### Initialize tool
 ```python
->>> from disfluency_generation import LARD
+>>> from python_files.disfluency_generation import LARD
 >>> lard = LARD
 ```
 
@@ -95,7 +97,7 @@ You can also use the LARD tool to generate multiple types of disfluencies from a
 function.
 
 ```python
-from create_dataset import create_dataset
+from python_files.create_dataset import create_dataset
 
 create_dataset(INPUT_FILE_PATH,
                    OUTPUT_DIR,

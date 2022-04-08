@@ -1,8 +1,9 @@
 import nltk
+import os
 import pandas as pd
 import numpy as np
 from colorama import Fore
-from disfluency_generation import LARD
+from python_files.disfluency_generation import LARD
 import random
 from colorama import init
 
@@ -96,7 +97,7 @@ def create_dataset(input_file_path,
         print("You have to input a supported format input file. Supported formats: .csv or .json")
 
     if output_dir is None:
-        output_dir = './data/output_data'
+        output_dir = os.getcwd() + '/data/output_data'
 
     if keep_fluent:
         if percentages is not None:
