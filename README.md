@@ -100,7 +100,7 @@ from python_files.create_dataset import create_dataset
 
 create_dataset(INPUT_FILE_PATH,
                    OUTPUT_DIR,
-                   column_text=column_text,
+                   column_text=COLUMN_TEXT,
                    keep_fluent=False,
                    create_all_files=True,
                    concat_files=True)
