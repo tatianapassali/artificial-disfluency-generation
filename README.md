@@ -166,9 +166,7 @@ Bibtex entry:
 }
 ```
 
-## Contributors
-tbd
-
 ## Licence
-This code is released under CC BY-SA 4.0 Licence.  
- [![License: CC BY-SA 4.0](https://licensebuttons.net/l/by-sa/4.0/80x15.png)](https://creativecommons.org/licenses/by-sa/4.0/)
+tbd
+ 
+Learn more in the LICENCE file.
