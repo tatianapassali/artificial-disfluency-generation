@@ -37,7 +37,7 @@ You can use the LARD tool to auto-generate disfluencies such as repetitions, res
 ### Initialize tool
 ```python
 >>> from python_files.disfluency_generation import LARD
->>> lard = LARD
+>>> lard = LARD()
 ```
 
 ### Generate repetitions
@@ -170,4 +170,5 @@ Bibtex entry:
 tbd
 
 ## Licence
-tbd
+This code is released under CC BY-SA 4.0 Licence.  
+ [![License: CC BY-SA 4.0](https://licensebuttons.net/l/by-sa/4.0/80x15.png)](https://creativecommons.org/licenses/by-sa/4.0/)
