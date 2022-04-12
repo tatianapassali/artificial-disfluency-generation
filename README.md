@@ -85,7 +85,7 @@ sequences to generate a restart like this:
 
 ```python
 >>> fluent_sentence_1 = "where can i find a pharmacy near me ?"
->>> fluent_sentence_1 = "what time do you close ?"
+>>> fluent_sentence_2 = "what time do you close ?"
 >>> disfluency = lard.create_restarts(fluent_sentence_1, fluent_sentence_2)
 >>> print(disfluency[0])
 'where can i what time do you close ?'
