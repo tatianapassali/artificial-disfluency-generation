@@ -131,7 +131,7 @@ The dataset consists of three Comma-Separated Values (CSV) files (train.csv, val
 
 `binary_label`: 1 if disfluency exists, 0 if no disfluency exists.
 
-`mutliclass_label`: The type of difsluency, if exists (0: no disfluency, 1: repetition, 2:replacement, 3:restart)
+`mutliclass_label`: The type of difsluency, if exists (0: no disfluency, 1: repetition, 2: replacement, 3: restart)
 
 `token_tags`: A list with the tag for each token of the tokenized disfluent text (0: fluent token, D: disfluent token).
 
@@ -148,11 +148,11 @@ The dataset consists of three Comma-Separated Values (CSV) files (train.csv, val
 
 **Dataset License:** [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC_BY--SA_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
 
-You can download the dataset from [here.](https://bit.ly/LARDdataset)
+You can download the dataset from Zenodo [here.](https://zenodo.org/record/6451984)
 
 ## Citation
 
-You can find more details about this work in our [paper](https://arxiv.org/pdf/2201.05041.pdf). If you use our code in your research, please consider citing our paper.
+If you use our code in your research, please consider citing our paper.
 
 Bibtex entry:
 
@@ -165,8 +165,13 @@ Bibtex entry:
   year={2022}
 }
 ```
+## Funded by
+The presented work is partially funded by the European Commission as part of its H2020 Programme, under the contract
+number 870930-IA.
 
 ## License
 This code is released under CC BY-NC-SA 4.0. Learn more in the [LICENSE](LICENSE.txt) file. 
 
-[![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC_BY--NC_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)  
+[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC_BY--NC--SA_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+
+
