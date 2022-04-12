@@ -146,7 +146,7 @@ The dataset consists of three Comma-Separated Values (CSV) files (train.csv, val
 
 **Source data**: [Schema-Guided Dialogue (SGD) ](https://arxiv.org/pdf/1801.04871.pdf)
 
-**License:** [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC_BY--SA_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
+**Dataset License:** [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC_BY--SA_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
 
 You can download the dataset from [here.](https://bit.ly/LARDdataset)
 
