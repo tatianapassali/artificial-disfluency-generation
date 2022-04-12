@@ -167,6 +167,6 @@ Bibtex entry:
 ```
 
 ## License
-This code is released under CC BY-NC-SA 4.0. Learn more in the [LICENSE](LICENSE.md) file. 
+This code is released under CC BY-NC-SA 4.0. Learn more in the [LICENSE](LICENSE.txt) file. 
 
 [![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC_BY--NC_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)  
