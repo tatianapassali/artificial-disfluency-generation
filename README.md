@@ -142,11 +142,11 @@ The dataset consists of three Comma-Separated Values (CSV) files (train.csv, val
 | # Examples                 | 57,595     | 19,198     | 19,199  |
 
 
-**Language:** English (`en`)
+**Language**: English (`en`)
 
 **Source data**: [Schema-Guided Dialogue (SGD) ](https://arxiv.org/pdf/1801.04871.pdf)
 
-**License:** The dataset is released under [![License: CC BY-SA 4.0](https://licensebuttons.net/l/by-sa/4.0/80x15.png)](https://creativecommons.org/licenses/by-sa/4.0/).
+**License:** [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC_BY--SA_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
 
 You can download the dataset from [here.](https://bit.ly/LARDdataset)
 
@@ -166,7 +166,7 @@ Bibtex entry:
 }
 ```
 
-## Licence
-tbd
- 
-Learn more in the LICENCE file.
+## License
+This code is released under CC BY-NC-SA 4.0. Learn more in the [LICENSE](LICENSE.md) file. 
+
+[![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC_BY--NC_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)  
