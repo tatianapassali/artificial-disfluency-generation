@@ -109,7 +109,7 @@ create_dataset(INPUT_FILE_PATH,
 You can also specify the fraction of fluencies, repetitions, replacements and restarts. Please refer to the documentation of create_dataset.py for more information about the parameters of this function.
 
 **NOTE**: The input file must be formatted as a.csv file with one or more columns. You also need to specify the text column for the generation of the
-disfluencies. A sample .csv file can be found at sample_data directory. 
+disfluencies. A sample .csv file can be found at sample_data directory.
 
 ## LARD Dataset
 We created our own disfluent dataset bulding upon [Schema-Guided Dialogue (SGD)](https://arxiv.org/pdf/1801.04871.pdf). 
