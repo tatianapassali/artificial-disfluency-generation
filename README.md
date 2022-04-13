@@ -166,8 +166,7 @@ Bibtex entry:
 }
 ```
 ## Funded by
-The presented work is partially funded by the European Commission as part of its H2020 Programme, under the contract
-number 870930-IA.
+This work has been partially funded by the European Commission as part of its H2020 Programme, under the contract number 870930-IA ([WELCOME Project](https://welcome-h2020.eu/)).
 
 ## License
 This code is released under CC BY-NC-SA 4.0. Learn more in the [LICENSE](LICENSE.txt) file. 
