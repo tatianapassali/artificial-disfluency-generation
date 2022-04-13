@@ -165,7 +165,7 @@ Bibtex entry:
   year={2022}
 }
 ```
-## Funded by
+## Acknowledgments
 This work has been partially funded by the European Commission as part of its H2020 Programme, under the contract number 870930-IA ([WELCOME Project](https://welcome-h2020.eu/)).
 
 ## License
