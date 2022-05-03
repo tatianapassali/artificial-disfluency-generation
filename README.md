@@ -1,5 +1,5 @@
 # artificial-disfluency-generation
-LARD: A tool to generate artificial disfluencies from fluent text easily and promptly
+LARD: Generating artificial disfluencies from fluent text easily and promptly
 
 This repository contains the code for paper: [LARD: Large-scale Artificial Disfluency Generation.](https://arxiv.org/pdf/2201.05041.pdf)
 
