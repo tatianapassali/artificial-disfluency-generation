@@ -1,7 +1,7 @@
 # artificial-disfluency-generation
 LARD: Generating artificial disfluencies from fluent text easily and promptly
 
-This repository contains the code for paper: [LARD: Large-scale Artificial Disfluency Generation.](https://arxiv.org/pdf/2201.05041.pdf)
+This repository contains the code for paper: [LARD: Large-scale Artificial Disfluency Generation.](http://www.lrec-conf.org/proceedings/lrec2022/pdf/2022.lrec-1.249.pdf)
 
 ## Requirements
 `Python>=3.8`  
@@ -157,13 +157,18 @@ If you use our code in your research, please consider citing our paper.
 Bibtex entry:
 
 ```
-@inproceedings{lard2022,
-  title={LARD: Large-scale Artificial Disfluency Generation},
-  author={Passali, Tatiana and Mavropoulos, Thanassis and Tsoumakas, Grigorios and Meditskos, Georgios and Vrochidis, Stefanos},
-  booktitle={Proceedings of the Thirteenth International Conference on Language Resources and Evaluation (LREC 2022), to appear},
-  pages={N/A},
-  year={2022}
+@inproceedings{passali2022lard,
+  author    = {Passali, Tatiana  and  Mavropoulos, Thanassis  and  Tsoumakas, Grigorios  and  Meditskos, Georgios  and  Vrochidis, Stefanos},
+  title     = {LARD: Large-scale Artificial Disfluency Generation},
+  booktitle      = {Proceedings of the Language Resources and Evaluation Conference},
+  month          = {June},
+  year           = {2022},
+  address        = {Marseille, France},
+  publisher      = {European Language Resources Association},
+  pages     = {2327--2336},
+  url       = {https://aclanthology.org/2022.lrec-1.249}
 }
+
 ```
 ## Acknowledgements
 This work has been partially funded by the European Commission as part of its H2020 Programme, under the contract number 870930-IA ([WELCOME Project](https://welcome-h2020.eu/)).
