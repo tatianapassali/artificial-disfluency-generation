@@ -120,10 +120,10 @@ def create_dataset(input_file_path,
             else:
                 print("Setting percentages...\n")
 
-            fluencies = percentages[0]
-            repetitions = percentages[1]
-            restarts = percentages[2]
-            replacements = percentages[3]
+            fluencies = percentages_with_fluent[0]
+            repetitions = percentages_with_fluent[1]
+            restarts = percentages_with_fluent[2]
+            replacements = percentages_with_fluent[3]
 
             print("Fluencies: " + str(fluencies) + "%")
             print("Repetitions: " + str(repetitions) + "%")
