@@ -236,7 +236,7 @@ def create_dataset(input_file_path,
                 else:
                     print("Setting percentages...\n")
 
-            if percentages_with_fluent[2] != 0:
+            if percentages_with_fluent[3] != 0:
                 noun_with_cue = replacement_types_percentage[0]
                 noun_without_cue = replacement_types_percentage[1]
                 verb_with_cue = replacement_types_percentage[2]
@@ -251,12 +251,13 @@ def create_dataset(input_file_path,
                 print("Adjective replacements with repair cue: " + str(adj_with_cue) + "%")
                 print("Adjective replacements without repair cue: " + str(adj_without_cue) + "%\n")
 
-                first_split = int(noun_with_cue / 100)
-                second_split = first_split + int(noun_without_cue / 100)
-                third_split = second_split + int(verb_with_cue / 100)
-                fourth_split = third_split + int(verb_without_cue / 100)
-                fifth_split = fourth_split + int(adj_with_cue / 100)
+                first_split = noun_with_cue / 100
+                second_split = first_split + noun_without_cue / 100
+                third_split = second_split + verb_with_cue / 100
+                fourth_split = third_split + verb_without_cue / 100
+                fifth_split = fourth_split + adj_with_cue / 100
 
+                
                 noun_with_cue_set, noun_without_cue_set, \
                 verb_with_cue_set, verb_without_cue_set, \
                 adj_with_cue_set, adj_without_cue_set = np.split(replacement_set,
