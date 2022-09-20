@@ -256,7 +256,6 @@ def create_dataset(input_file_path,
                 third_split = second_split + verb_with_cue / 100
                 fourth_split = third_split + verb_without_cue / 100
                 fifth_split = fourth_split + adj_with_cue / 100
-
                 
                 noun_with_cue_set, noun_without_cue_set, \
                 verb_with_cue_set, verb_without_cue_set, \
