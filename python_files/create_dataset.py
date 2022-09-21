@@ -61,7 +61,7 @@ def create_dataset(input_file_path,
             of different types of repetitions. The first value refers to the percentage of first-degree repetitions,
             the second value refers to the percentage of second-degree repetitions and the third value refers to the
             percentage of  third-degree repetitions. All the values must sum to 100. If it is not specified, the default
-            value is set to [40, 30, 30] where 450% of the repetition set will be first-degree repetitions, 30%  will be
+            value is set to [40, 30, 30] where 40% of the repetition set will be first-degree repetitions, 30%  will be
             second-degree repetitions and 30% will be third-degree repetitions.
 
             replacement_types_percentage (List[`int`], *optional*, defaults to 'None'): A list with the percentages
