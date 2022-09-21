@@ -181,9 +181,9 @@ def create_dataset(input_file_path,
                 second_split = first_split + two_reps / 100
 
                 one_reps_set, two_reps_set, three_reps_set = np.split(repetition_set,
-                                                                      [int(first_split * len(fluent_data)),
+                                                                      [int(first_split * len(repetition_set)),
                                                                        int(second_split * len(
-                                                                           fluent_data))])
+                                                                           repetition_set))])
 
                 print("Creating repetitions...")
 
@@ -260,11 +260,11 @@ def create_dataset(input_file_path,
                 noun_with_cue_set, noun_without_cue_set, \
                 verb_with_cue_set, verb_without_cue_set, \
                 adj_with_cue_set, adj_without_cue_set = np.split(replacement_set,
-                                                                 [int(first_split * len(fluent_data)),
-                                                                  int(second_split * len(fluent_data)),
-                                                                  int(third_split * len(fluent_data)),
-                                                                  int(fourth_split * len(fluent_data)),
-                                                                  int(fifth_split * len(fluent_data))])
+                                                                 [int(first_split * len(replacement_set)),
+                                                                  int(second_split * len(replacement_set)),
+                                                                  int(third_split * len(replacement_set)),
+                                                                  int(fourth_split * len(replacement_set)),
+                                                                  int(fifth_split * len(replacement_set))])
 
                 print("Creating replacements...")
                 print("Warning: This process might take a little longer, especially if you process a large dataset.")
@@ -368,9 +368,9 @@ def create_dataset(input_file_path,
             first_split = one_reps / 100
             second_split = first_split + two_reps / 100
 
-            one_reps_set, two_reps_set, three_reps_set = np.split(repetition_set, [int(first_split * len(fluent_data)),
+            one_reps_set, two_reps_set, three_reps_set = np.split(repetition_set, [int(first_split * len(repetition_set)),
                                                                                    int(second_split * len(
-                                                                                       fluent_data))])
+                                                                                       repetition_set))])
 
             print("Creating repetitions...")
             one_reps_set = create_disfluencies(one_reps_set, column_text, 'repetition', degree=1)
@@ -446,11 +446,11 @@ def create_dataset(input_file_path,
             noun_with_cue_set, noun_without_cue_set, \
             verb_with_cue_set, verb_without_cue_set, \
             adj_with_cue_set, adj_without_cue_set = \
-                np.split(replacement_set, [int(first_split * len(fluent_data)),
-                                           int(second_split * len(fluent_data)),
-                                           int(third_split * len(fluent_data)),
-                                           int(fourth_split * len(fluent_data)),
-                                           int(fifth_split * len(fluent_data))])
+                np.split(replacement_set, [int(first_split * len(replacement_set)),
+                                           int(second_split * len(replacement_set)),
+                                           int(third_split * len(replacement_set)),
+                                           int(fourth_split * len(replacement_set)),
+                                           int(fifth_split * len(replacement_set))])
             print("Creating replacements...")
             print("Warning: This process might take a little longer, especially if you process a large dataset.")
 
