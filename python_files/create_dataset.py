@@ -177,8 +177,8 @@ def create_dataset(input_file_path,
                 print("Second-degree repetitions: " + str(two_reps) + "%")
                 print("Third-degree repetitions: " + str(three_reps) + "%")
 
-                first_split = int(one_reps / 100)
-                second_split = first_split + int(two_reps / 100)
+                first_split = one_reps / 100
+                second_split = first_split + two_reps / 100
 
                 one_reps_set, two_reps_set, three_reps_set = np.split(repetition_set,
                                                                       [int(first_split * len(fluent_data)),
