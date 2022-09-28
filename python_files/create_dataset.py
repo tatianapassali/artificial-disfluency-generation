@@ -550,7 +550,7 @@ def create_disfluencies(set, column_text, disfl_type, degree=None, pos=None, con
 
                 disfluent_sentence.append(tmp_disfluent_sentence)
                 fluent_tokens.append(tmp_fluent_tokens)
-                disfluent_tokens.append(tmp_disfluent_sentence)
+                disfluent_tokens.append(tmp_disfluent_tokens)
                 annotations.append(tmp_annotations)
                 disfl_type.append(tmp_disfl_type)
 
