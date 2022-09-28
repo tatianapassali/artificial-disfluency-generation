@@ -61,7 +61,7 @@ def create_dataset(input_file_path,
             of different types of repetitions. The first value refers to the percentage of first-degree repetitions,
             the second value refers to the percentage of second-degree repetitions and the third value refers to the
             percentage of  third-degree repetitions. All the values must sum to 100. If it is not specified, the default
-            value is set to [40, 30, 30] where 450% of the repetition set will be first-degree repetitions, 30%  will be
+            value is set to [40, 30, 30] where 40% of the repetition set will be first-degree repetitions, 30%  will be
             second-degree repetitions and 30% will be third-degree repetitions.
 
             replacement_types_percentage (List[`int`], *optional*, defaults to 'None'): A list with the percentages
@@ -177,13 +177,13 @@ def create_dataset(input_file_path,
                 print("Second-degree repetitions: " + str(two_reps) + "%")
                 print("Third-degree repetitions: " + str(three_reps) + "%")
 
-                first_split = int(one_reps / 100)
-                second_split = first_split + int(two_reps / 100)
+                first_split = one_reps / 100
+                second_split = first_split + two_reps / 100
 
                 one_reps_set, two_reps_set, three_reps_set = np.split(repetition_set,
-                                                                      [int(first_split * len(fluent_data)),
+                                                                      [int(first_split * len(repetition_set)),
                                                                        int(second_split * len(
-                                                                           fluent_data))])
+                                                                           repetition_set))])
 
                 print("Creating repetitions...")
 
@@ -236,7 +236,7 @@ def create_dataset(input_file_path,
                 else:
                     print("Setting percentages...\n")
 
-            if percentages_with_fluent[2] != 0:
+            if percentages_with_fluent[3] != 0:
                 noun_with_cue = replacement_types_percentage[0]
                 noun_without_cue = replacement_types_percentage[1]
                 verb_with_cue = replacement_types_percentage[2]
@@ -251,20 +251,20 @@ def create_dataset(input_file_path,
                 print("Adjective replacements with repair cue: " + str(adj_with_cue) + "%")
                 print("Adjective replacements without repair cue: " + str(adj_without_cue) + "%\n")
 
-                first_split = int(noun_with_cue / 100)
-                second_split = first_split + int(noun_without_cue / 100)
-                third_split = second_split + int(verb_with_cue / 100)
-                fourth_split = third_split + int(verb_without_cue / 100)
-                fifth_split = fourth_split + int(adj_with_cue / 100)
-
+                first_split = noun_with_cue / 100
+                second_split = first_split + noun_without_cue / 100
+                third_split = second_split + verb_with_cue / 100
+                fourth_split = third_split + verb_without_cue / 100
+                fifth_split = fourth_split + adj_with_cue / 100
+                
                 noun_with_cue_set, noun_without_cue_set, \
                 verb_with_cue_set, verb_without_cue_set, \
                 adj_with_cue_set, adj_without_cue_set = np.split(replacement_set,
-                                                                 [int(first_split * len(fluent_data)),
-                                                                  int(second_split * len(fluent_data)),
-                                                                  int(third_split * len(fluent_data)),
-                                                                  int(fourth_split * len(fluent_data)),
-                                                                  int(fifth_split * len(fluent_data))])
+                                                                 [int(first_split * len(replacement_set)),
+                                                                  int(second_split * len(replacement_set)),
+                                                                  int(third_split * len(replacement_set)),
+                                                                  int(fourth_split * len(replacement_set)),
+                                                                  int(fifth_split * len(replacement_set))])
 
                 print("Creating replacements...")
                 print("Warning: This process might take a little longer, especially if you process a large dataset.")
@@ -368,9 +368,9 @@ def create_dataset(input_file_path,
             first_split = one_reps / 100
             second_split = first_split + two_reps / 100
 
-            one_reps_set, two_reps_set, three_reps_set = np.split(repetition_set, [int(first_split * len(fluent_data)),
+            one_reps_set, two_reps_set, three_reps_set = np.split(repetition_set, [int(first_split * len(repetition_set)),
                                                                                    int(second_split * len(
-                                                                                       fluent_data))])
+                                                                                       repetition_set))])
 
             print("Creating repetitions...")
             one_reps_set = create_disfluencies(one_reps_set, column_text, 'repetition', degree=1)
@@ -446,11 +446,11 @@ def create_dataset(input_file_path,
             noun_with_cue_set, noun_without_cue_set, \
             verb_with_cue_set, verb_without_cue_set, \
             adj_with_cue_set, adj_without_cue_set = \
-                np.split(replacement_set, [int(first_split * len(fluent_data)),
-                                           int(second_split * len(fluent_data)),
-                                           int(third_split * len(fluent_data)),
-                                           int(fourth_split * len(fluent_data)),
-                                           int(fifth_split * len(fluent_data))])
+                np.split(replacement_set, [int(first_split * len(replacement_set)),
+                                           int(second_split * len(replacement_set)),
+                                           int(third_split * len(replacement_set)),
+                                           int(fourth_split * len(replacement_set)),
+                                           int(fifth_split * len(replacement_set))])
             print("Creating replacements...")
             print("Warning: This process might take a little longer, especially if you process a large dataset.")
 
@@ -550,7 +550,7 @@ def create_disfluencies(set, column_text, disfl_type, degree=None, pos=None, con
 
                 disfluent_sentence.append(tmp_disfluent_sentence)
                 fluent_tokens.append(tmp_fluent_tokens)
-                disfluent_tokens.append(tmp_disfluent_sentence)
+                disfluent_tokens.append(tmp_disfluent_tokens)
                 annotations.append(tmp_annotations)
                 disfl_type.append(tmp_disfl_type)
 
